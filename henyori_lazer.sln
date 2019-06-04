@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "henyori_lazer", "henyori_lazer.vcxproj", "{27B15736-5482-4CE0-B667-4E1F06F3859E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27B15736-5482-4CE0-B667-4E1F06F3859E}.Debug|x64.ActiveCfg = Debug|x64
+		{27B15736-5482-4CE0-B667-4E1F06F3859E}.Debug|x64.Build.0 = Debug|x64
+		{27B15736-5482-4CE0-B667-4E1F06F3859E}.Debug|x86.ActiveCfg = Debug|Win32
+		{27B15736-5482-4CE0-B667-4E1F06F3859E}.Debug|x86.Build.0 = Debug|Win32
+		{27B15736-5482-4CE0-B667-4E1F06F3859E}.Release|x64.ActiveCfg = Release|x64
+		{27B15736-5482-4CE0-B667-4E1F06F3859E}.Release|x64.Build.0 = Release|x64
+		{27B15736-5482-4CE0-B667-4E1F06F3859E}.Release|x86.ActiveCfg = Release|Win32
+		{27B15736-5482-4CE0-B667-4E1F06F3859E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8859971D-6086-4DC5-80FA-7043B0F41340}
+	EndGlobalSection
+EndGlobal
