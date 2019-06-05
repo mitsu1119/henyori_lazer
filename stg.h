@@ -1,5 +1,6 @@
 #pragma once
 #include "DxLib.h"
+#include <deque>
 
 // for coord, vector, etc
 class Point {
@@ -12,24 +13,43 @@ public:
 
 // bullet
 class Bullet {
-public:
-	Bullet();
-
-	Bullet(Point p0, Point p1, Point p2, int speed);
-
-	Point p0, p1, p2;
-	Point coord;
+private:
+	Point *p0, *p1, *p2;
+	Point *coord;
+	bool flag;
 
 	// Speed of a bullet. 
 	// correspondence divide number
 	int speed;
 	unsigned int cnt;
 
-	bool flag;
+public:
+	Bullet();
+	Bullet(Point *p0, Point *p1, Point *p2, int speed);
+	~Bullet();
+
+	bool isUsed();
 
 	// Bezier curve
-	void move();
-
+	Point move();
 	void draw();
+};
 
+// lazer
+class Lazer {
+private:
+	Bullet *tip;
+	int state;		// 0: not existing, 1: existing, 2:existing only tracing
+
+	unsigned int tracingSize;
+	std::deque<Point> tracing;
+
+public:
+	Lazer();
+	Lazer(Point *p0, Point *p1, Point *p2, int speed, unsigned int tracingSize);
+	~Lazer();
+
+	bool isUsed();
+	void move();
+	void draw();
 };
