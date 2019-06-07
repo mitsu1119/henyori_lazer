@@ -14,7 +14,7 @@ public:
 // bullet
 class Bullet {
 private:
-	Point *p0, *p1, *p2;
+	Point p0, p1, p2, p3;
 	Point *coord;
 	bool flag;
 
@@ -25,13 +25,15 @@ private:
 
 public:
 	Bullet();
-	Bullet(Point *p0, Point *p1, Point *p2, int speed);
+	Bullet(Point p0, Point p1, Point p2, Point p3, int speed);
 	~Bullet();
 
 	bool isUsed();
+	bool isHit(int x, int y, int sizeX, int sizeY);
 
 	// Bezier curve
 	Point move();
+
 	void draw();
 };
 
@@ -46,8 +48,13 @@ private:
 
 public:
 	Lazer();
-	Lazer(Point *p0, Point *p1, Point *p2, int speed, unsigned int tracingSize);
+	Lazer(Point p0, Point p1, Point p2, Point p3, int speed, unsigned int tracingSize);
 	~Lazer();
+
+	// state: 1 -> 2
+	void destroy();
+
+	bool isHit(int x, int y, int sizeX, int sizeY);
 
 	bool isUsed();
 	void move();
